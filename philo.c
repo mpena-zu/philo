@@ -1,22 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   philo.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/28 17:42:48 by mpena-zu         ###   ########.fr       */
+/*   Created: 2025/07/28 17:31:02 by mpena-zu          #+#    #+#             */
+/*   Updated: 2025/07/28 17:45:01 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
+#include "philo.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-
-int	ft_atoi(const char *nptr);
-
-#endif
+void	start_meal(int philo_number, int time_die, int time_eat, int time_sleep);
