@@ -8,7 +8,7 @@ AR = ar rcs
 
 RM = rm -rf
 
-SOURCES = 
+SOURCES = main.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
