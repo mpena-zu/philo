@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/30 14:27:15 by mpena-zu         ###   ########.fr       */
+/*   Created: 2025/07/30 14:08:15 by mpena-zu          #+#    #+#             */
+/*   Updated: 2025/07/30 14:11:04 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_H
-# define PHILO_H
+#include "philo.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <pthread.h>
-
-typedef struct s_philo
+int	error_message(char *str)
 {
-};
+	int i;
 
-int	ft_atoi(const char *nptr);
-int	error_message(char *str);
-void	start_meal(int philo_number, int time_die, int time_eat, int time_sleep);
-
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	write(2, "Error: ", 8);
+	write(2, str, i);
+	write(2, "\n", 1);
+	return (1);
+}

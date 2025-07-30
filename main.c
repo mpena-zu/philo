@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:02 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/28 17:44:03 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/07/30 14:11:49 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ int	main(int argc, char **argv)
 		(void)argv;
 	}
 	else
-	{
-		write(2, "Error: Incorrect number of arguments\n", 38);
-		return (1);
-	}
+		return(error_message("Wrong arguments"));
 	return (0);
 }
