@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:02 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/30 14:11:49 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/07/31 13:54:02 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int argc, char **argv)
 		(void)argv;
 	}
 	else
-		return(error_message("Wrong arguments"));
+		return (error_message("Wrong arguments"));
 	return (0);
 }
