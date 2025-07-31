@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/31 15:55:06 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/07/31 17:24:43 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+
+typedef struct s_philo t_philo;
 
 typedef struct s_data
 {
