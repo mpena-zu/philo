@@ -8,7 +8,7 @@ AR = ar rcs
 
 RM = rm -rf
 
-SOURCES = main.c utils.c error_message.c philo.c
+SOURCES = main.c utils.c philo.c routine.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
@@ -24,7 +24,7 @@ $(NAME): $(OBJECTS)
 	@$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 	@$(MAKE) -s progress
 	@echo ""
-	@echo "$(GREEN)¡Compilación del philo completada!$(NC)"
+	@echo "$(GREEN)Philo compilation completed!$(NC)"
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
@@ -32,12 +32,12 @@ $(NAME): $(OBJECTS)
 
 clean:
 	@$(RM) $(OBJECTS)
-	@echo "$(YELLOW)¡Dejamos todo preparado para el philo!$(NC)"
+	@echo "$(YELLOW)Cleaning up object files for philo...$(NC)"
 
 
 fclean:
 	@$(RM) $(OBJECTS) $(NAME)
-	@echo "$(RED)¡Todo limpio del philo!$(NC)"
+	@echo "$(RED)Philo project fully cleaned!$(NC)"
 
 re: fclean all
 

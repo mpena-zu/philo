@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/08/01 15:11:48 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/08/04 12:17:08 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/time.h>
 
-
-typedef struct s_philo t_philo;
+typedef struct s_philo	t_philo;
 
 typedef struct s_data
 {
@@ -55,6 +55,8 @@ int					ft_atoi(const char *nptr);
 int					error_message(char *str);
 void				start_meal(int philo_number, int time_die, int time_eat,
 						int time_sleep);
-void				eat_time(t_data *data);
+void				create_thread(t_data *data);
+void				think_time(t_philo *philo);
+long				get_time(void);
 
 #endif

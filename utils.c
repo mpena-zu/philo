@@ -6,11 +6,24 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:37:03 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/28 17:45:08 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/08/04 12:22:53 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
+
+int	error_message(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	write(2, "Error: ", 8);
+	write(2, str, i);
+	write(2, "\n", 1);
+	return (1);
+}
 
 int	ft_atoi(const char *nptr)
 {
@@ -36,4 +49,12 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (result * sign);
+}
+
+long	get_time(void)
+{
+    struct timeval tv;
+
+    gettimeofday(&tv, NULL);
+    return (tv.tv_sec * 1000) + (tv.tv_usec / 1000);
 }
