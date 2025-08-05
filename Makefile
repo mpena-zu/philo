@@ -8,7 +8,7 @@ AR = ar rcs
 
 RM = rm -rf
 
-SOURCES = main.c utils.c philo.c routine.c
+SOURCES = main.c utils.c philo.c routine.c init.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

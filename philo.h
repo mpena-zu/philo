@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/08/04 12:17:08 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/08/05 11:30:01 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,12 @@ int					error_message(char *str);
 void				start_meal(int philo_number, int time_die, int time_eat,
 						int time_sleep);
 void				create_thread(t_data *data);
-void				think_time(t_philo *philo);
 long				get_time(void);
+void				think_time(t_philo *philo);
+void				eat_time(t_philo *philo);
+void				sleep_time(t_philo *philo);
+void				init_data(t_data *data, int time_die, int time_eat, int time_sleep);
+int					init_forks(t_data *data);
+int					init_philos(t_data *data);
 
 #endif

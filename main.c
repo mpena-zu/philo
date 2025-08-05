@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:02 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/31 13:54:02 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/08/05 12:06:32 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,21 @@ int	main(int argc, char **argv)
 {
 	if (argc == 5)
 	{
+		if (ft_atoi(argv[1]) == 0)
+		{
+			printf("You need at least 1 philo to start\n");
+			return (1);
+		}
 		start_meal(ft_atoi(argv[1]), ft_atoi(argv[2]), ft_atoi(argv[3]),
 			ft_atoi(argv[4]));
 	}
 	else if (argc == 6)
 	{
+		if (ft_atoi(argv[1]) == 0)
+		{
+			printf("You need at least 1 philo to start\n");
+			return (1);
+		}
 		(void)argv;
 	}
 	else
