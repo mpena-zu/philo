@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 11:18:01 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/08/05 13:04:54 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/10/07 12:39:42 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	init_philos(t_data *data)
 	{
 		data->philos[i].philo_number = i + 1;
 		data->philos[i].philo_meals = 0;
-		data->philos[i].philo_last_meal = get_time();
+		data->philos[i].philo_last_meal = 0;
 		data->philos[i].is_dead = 0;
 		data->philos[i].left_fork = &data->forks[i];
 		data->philos[i].right_fork = &data->forks[(i + 1) % data->n_philo];

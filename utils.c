@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:37:03 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/08/05 13:00:32 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/10/07 13:55:49 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,15 @@ long	get_time(void)
 
     gettimeofday(&tv, NULL);
     return (tv.tv_sec * 1000) + (tv.tv_usec / 1000);
+}
+
+void	free_time(t_data *data)
+{
+	int	i;
+	
+	i = 0;
+	while (data->philos > i)
+	{
+		free(data->)
+	}
 }
