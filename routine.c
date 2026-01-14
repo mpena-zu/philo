@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 11:31:11 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/10/02 13:24:54 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/11/03 15:21:35 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	eat_time(t_philo *philo)
 	time = get_time() - philo->data->start_time;
 	if (time > philo->data->time_to_eat)
 		philo->is_dead = 1;
+	//check_death(philo->data);
 	pthread_mutex_lock(&philo->data->print_mutex);
 	printf("%ld Philo #%d has taken a fork\n", time, philo->philo_number);
 	pthread_mutex_unlock(&philo->data->print_mutex);

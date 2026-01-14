@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:37:03 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/10/07 13:55:49 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2026/01/14 14:28:48 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,33 @@ long	get_time(void)
     return (tv.tv_sec * 1000) + (tv.tv_usec / 1000);
 }
 
-void	free_time(t_data *data)
+int	is_number(char *argv)
 {
-	int	i;
-	
+	int i;
+
 	i = 0;
-	while (data->philos > i)
+	if (argv[i] == '+')
+		i++;
+	while (argv[i])
 	{
-		free(data->)
+		if (argv[i] >= '0' && argv[i] <= '9')
+			i++;
+		else
+			return (0);
 	}
+	return (1);
+}
+
+int	check_arguments(char **argv)
+{
+	int i;
+
+	i = 1;
+	while (argv[i])
+	{
+		if (!is_number(argv[i]))
+			return (1);
+		i++;
+	}
+	return (0);
 }

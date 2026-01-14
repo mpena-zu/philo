@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/08/05 11:30:01 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2026/01/14 14:28:53 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ typedef struct s_data
 	int				time_to_sleep;
 	int				time_to_die;
 	int				meals_required;
-
+	int				stop_simulation;
 	int				simulation_end;
 	long			start_time;
 
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	print_mutex;
 	pthread_mutex_t	simulation_mutex;
+	pthread_mutex_t	stop_mutex;
 	t_philo			*philos;
 }					t_data;
 
@@ -63,5 +64,8 @@ void				sleep_time(t_philo *philo);
 void				init_data(t_data *data, int time_die, int time_eat, int time_sleep);
 int					init_forks(t_data *data);
 int					init_philos(t_data *data);
+int					check_death(t_data *data);
+int					check_arguments(char **argv);
+int					is_number(char *argv);
 
 #endif

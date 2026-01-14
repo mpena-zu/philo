@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:02 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/08/05 12:06:32 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2026/01/14 14:32:32 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	main(int argc, char **argv)
 {
+	if (check_arguments(argv))
+		return(error_message("Use a valid character"));
 	if (argc == 5)
 	{
 		if (ft_atoi(argv[1]) == 0)

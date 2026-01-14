@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 11:18:01 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/10/07 12:39:42 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:38:17 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	init_data(t_data *data, int time_die, int time_eat, int time_sleep)
 	data->time_to_sleep = time_sleep;
 	data->meals_required = -1;
 	data->simulation_end = 0;
+	data->stop_simulation = 0;
 }
 
 int	init_forks(t_data *data)
