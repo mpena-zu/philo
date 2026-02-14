@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2026/01/14 14:28:53 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2026/02/13 12:06:05 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_philo
 {
 	int				philo_number;
 	int				philo_meals;
-	int				philo_last_meal;
+	long			philo_last_meal;
 	int				is_dead;
 
 	pthread_t		thread;
