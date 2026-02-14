@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 17:37:03 by mpena-zu          #+#    #+#             */
-/*   Updated: 2026/01/14 14:28:48 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2026/02/14 21:51:42 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,15 @@ int	ft_atoi(const char *nptr)
 
 long	get_time(void)
 {
-    struct timeval tv;
+	struct timeval	tv;
 
-    gettimeofday(&tv, NULL);
-    return (tv.tv_sec * 1000) + (tv.tv_usec / 1000);
+	gettimeofday(&tv, NULL);
+	return ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
 }
 
 int	is_number(char *argv)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (argv[i] == '+')
@@ -78,7 +78,7 @@ int	is_number(char *argv)
 
 int	check_arguments(char **argv)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (argv[i])

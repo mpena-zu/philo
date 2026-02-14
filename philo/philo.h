@@ -6,7 +6,7 @@
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:09:29 by mpena-zu          #+#    #+#             */
-/*   Updated: 2026/02/13 12:06:05 by mpena-zu         ###   ########.fr       */
+/*   Updated: 2026/02/14 22:23:49 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,21 @@ typedef struct s_philo
 
 int					ft_atoi(const char *nptr);
 int					error_message(char *str);
-void				start_meal(int philo_number, int time_die, int time_eat,
-						int time_sleep);
+void				start_meal(t_data *data);
 void				create_thread(t_data *data);
 long				get_time(void);
 void				think_time(t_philo *philo);
 void				eat_time(t_philo *philo);
 void				sleep_time(t_philo *philo);
-void				init_data(t_data *data, int time_die, int time_eat, int time_sleep);
+void				init_data(t_data *data, int time_die, int time_eat,
+						int time_sleep);
 int					init_forks(t_data *data);
 int					init_philos(t_data *data);
 int					check_death(t_data *data);
 int					check_arguments(char **argv);
 int					is_number(char *argv);
+void				print_status(t_philo *philo, char *status);
+void				cleanup(t_data *data);
+int					is_philo_dead(t_data *data, int i);
 
 #endif

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   freeall.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpena-zu <mpena-zu@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/30 14:08:15 by mpena-zu          #+#    #+#             */
-/*   Updated: 2025/07/30 14:11:04 by mpena-zu         ###   ########.fr       */
+/*   Created: 2026/02/14 20:56:10 by mpena-zu          #+#    #+#             */
+/*   Updated: 2026/02/14 21:05:58 by mpena-zu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int	error_message(char *str)
+void	cleanup(t_data *data)
 {
-	int i;
+	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	write(2, "Error: ", 8);
-	write(2, str, i);
-	write(2, "\n", 1);
-	return (1);
+	if (!data)
+		return ;
+	i = -1;
+	while (++i < data->n_philo)
+		pthread_mutex_destroy(&data->forks[i]);
+	pthread_mutex_destroy(&data->print_mutex);
+	pthread_mutex_destroy(&data->simulation_mutex);
+	if (data->forks)
+		free(data->forks);
+	if (data->philos)
+		free(data->philos);
+	free(data);
 }
